@@ -1,0 +1,197 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+small {
+  margin: 0;
+  padding: 10px;
+}
+
+header {
+  background-color: rgb(47, 47, 238);
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  margin-left: auto; 
+}
+
+p {
+  margin-top: 25px;
+  margin-left: 8px;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .test {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+.nav-content {
+  display: none;
+}
+
+
+.filter-section {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  padding-top: 20px;
+}
+
+#sort-select {
+  padding: 10px;
+  margin: 2px 0 10px 0;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.cards-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.cards-section .card:nth-child(n+2) {
+  display: none;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 40px;
+}
+
+.card img {
+  width: 80%;
+  height: auto;
+}
+
+.more-button {
+  text-align: center;
+  padding: 18px;
+  border-radius: 5px;
+  background-color: rgb(47, 47, 238);
+  color: whitesmoke;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-page,
+.next-page {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+}
+
+.current-page {
+  font-weight: bold;
+  color: #333;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 10px;
+  list-style: none;
+}
+
+footer {
+  background-color: rgb(47, 47, 238);
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icons {
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 4fr; 
+    grid-template-areas: "sidebar main";
+    height: 100vh;
+  }
+
+  .cards-section .card:nth-child(n+2) {
+    display: flex;
+  }
+  
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+  }
+
+  main {
+    margin-top: 100px;
+  }
+
+  .filter-section {
+    position: fixed;
+    top: 0;
+    width: 80%;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards-section{
+    padding: 20px;
+  }
+
+  footer {
+    background-color: blue;
+  }
+}
